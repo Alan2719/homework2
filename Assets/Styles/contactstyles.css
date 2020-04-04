@@ -159,7 +159,7 @@ header .header .logo-box {
 /*Main container styles*/
 .container {
     margin: 50px auto;
-    /*width: 700px;*/
+    width: 700px;
 }
 
 /*Container shadow*/
@@ -193,6 +193,12 @@ header .header .logo-box {
     background: linear-gradient(white, orange);
     border-top: solid 1px black;
 }
+
+@media (max-width: 576px) {
+    .container {
+      width: 450px;
+    }
+  }
 
 /*FOOTER---------------------------------------*/
 

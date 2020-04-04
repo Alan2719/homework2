@@ -154,6 +154,38 @@ header .header .logo-box {
     100% {background-color: #F7D905;}
 }
 
+/*MAIN CONTAINER------------------------------------*/
+
+.container {
+    background-color: #2676B6;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 0.3em;
+}
+
+.container .row .col {
+    margin: 20px 0;
+    position: relative;
+}
+
+.container .row .col .card .card-body {
+    width: 200px;
+}
+
+.container .row .col .card .card-body {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    top: 140px;
+}
+
+/*.container .row .col img{
+    width: 250px;
+    height: 200px;
+}*/
+
 /*FOOTER---------------------------------------*/
 
 /*text styles*/
