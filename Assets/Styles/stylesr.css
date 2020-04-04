@@ -6,15 +6,16 @@
 
 /*LOGO-------------------------------------------------------*/
 
+/*Header style*/
 .header {
     height: 100px;
-    /*background-color: wheat;*/
     padding: 0 30px;
     color: black;
     font-size: 20px;
     box-shadow: 1px 0px 5px rgba(0,0,0,.3);
 }
 
+/*Logo div styles*/
 header .header .logo-box {
     background-color: blue;
     border-left: solid 1px black;
@@ -24,28 +25,33 @@ header .header .logo-box {
     box-shadow: 1px 0px 5px rgba(0,0,0,.3);
 }
 
+/*Logo h2 styles*/
 .logo {
     line-height: 100px;
     float: left;
-    font-family: 'Questrial', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif; 
 }
+
 
 /*MENU---------------------------------------------------*/
 
+/*menu container styles*/
 .menu {
     float: right;
     padding: 35px 0;
     z-index: 3000   ;
 }
 
+/*menu links styles*/
 .menu a {
     text-decoration: none;
     color: black;
     padding: 0 10px;
     transition: 0.5s;
+    font-family: 'Arvo', serif;
 }
 
+/*botton of the menu*/
 .show-menu-btn, .hide-menu-btn {
     transition: 0.5s;
     font-size: 25px;
@@ -61,16 +67,23 @@ header .header .logo-box {
     line-height: 100px;
 }
 
+/*hover of the menu links*/
 .menu a:hover,
-.show-menu-btn:hover,
-.hide-menu-btn:hover {
+.show-menu-btn:hover {
     color: orange;
 }
 
+.hide-menu-btn {
+    color: white;
+}
+
+/*display menu when the screen is reduced*/
 #chk {
     margin-left: -150px;
     display: none;
 }
+
+/*threshold of screen when is reduced*/
 
 @media (max-width: 952px){
 
@@ -81,10 +94,17 @@ header .header .logo-box {
     .menu a {
         font-size: 18px;
     }
+
+    .hide-menu-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
 }
 
+/*Toogle menu*/
 @media (max-width: 858px) {
-    .show-menu-btn {
+    .show-menu-btn, .hide-menu-btn {
         display: block;
     }
     ul {
@@ -132,6 +152,7 @@ header .header .logo-box {
 
 /*MAIN CONTENT------------------------------------*/
 
+/*container sytles*/
 .container-main {
     display: flexbox;
     flex-direction: column;
@@ -140,56 +161,58 @@ header .header .logo-box {
     margin: 20px 0 0 30px;
     width: 1000px;
     padding: 25px;
-    height: 500px;
     margin-bottom: 60px;
     box-shadow: 1px 0px 5px rgba(0,0,0,.3);
 }
 
-.container-main .row .col-12 h2{
-    font-family: 'Righteous', cursive;
-}
-
-.container-main .row .col-12 {
-    margin-top: 10px;
-}
-
-.card {
-    position: relative;
-}
-
-.container-main .row .col-3 .card img {
+/*image properties*/
+.container-main .row .col-3 .card .card-img-top {
     width: 220px;
     height: 300px;
     border: none;
-    position: absolute;
-    -o-transition: opacity 4s ease-in-out;
 }
 
-.container-main .row .col-3 .card .bottom:hover {
-    width: 220px;
-    height: 300px;
-    border: none;
-    opacity: 0;
-}
-
+/*hover background color in the content*/
 .container-main .row .col-12:hover {
     background-color: #605EC6;
     transition-duration: 0.5s;
     border-radius: 0.3em;
+    color: white;
 }
 
 .container-main .row .col-9:hover {
     background-color: rgb(245, 146, 53);
     transition-duration: 0.5s;
     border-radius: 0.3em;
+    color: white;
 }
 
-.container-main .row .last-row {
-    position: fixed;
+.container-main .row .last-row:hover {
+    background-color: #FF1010;
+    transition-duration: 0.5s;
+    border-radius: 0.3em;
+    color: white;
+}
+
+/*h2, col-9 and col-12 styles*/
+.container-main .row .about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+.container-main .row .col-9 .card-body p{
+    font-family: 'IBM Plex Serif', serif;
+    text-align: justify;
+}
+
+.container-main .row .last-row p{
+    font-family: 'IBM Plex Serif', serif;
+    text-align: justify;
 }
 
 /*FOOTER---------------------------------------*/
 
+/*text styles*/
 footer .card .card-footer p {
     font-family: 'Questrial', sans-serif;
     text-align: center;
@@ -197,6 +220,7 @@ footer .card .card-footer p {
     color: black;
 }
 
+/*Container animation*/
 footer .card .card-footer {
     background-color: white;
     animation-name: footer;

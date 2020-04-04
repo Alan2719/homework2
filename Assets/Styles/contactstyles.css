@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+/*LOGO-------------------------------------------------------*/
+
+/*Header style*/
+.header {
+    height: 100px;
+    padding: 0 30px;
+    color: black;
+    font-size: 20px;
+    box-shadow: 1px 0px 5px rgba(0,0,0,.3);
+}
+
+/*Logo div styles*/
+header .header .logo-box {
+    background-color: blue;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    float: left;
+    height: 100px;
+    box-shadow: 1px 0px 5px rgba(0,0,0,.3);
+}
+
+/*Logo h2 styles*/
+.logo {
+    line-height: 100px;
+    float: left;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+
+/*MENU---------------------------------------------------*/
+
+/*menu container styles*/
+.menu {
+    float: right;
+    padding: 35px 0;
+    z-index: 3000   ;
+}
+
+/*menu links styles*/
+.menu a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+    transition: 0.5s;
+    font-family: 'Arvo', serif;
+}
+
+/*botton of the menu*/
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.5s;
+    font-size: 25px;
+    cursor: pointer;
+    display: none; /*Con none, los botones no serán visibles por el momento*/
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 100px;
+}
+
+/*hover of the menu links*/
+.menu a:hover,
+.show-menu-btn:hover {
+    color: orange;
+}
+
+.hide-menu-btn {
+    color: white;
+}
+
+/*display menu when the screen is reduced*/
+#chk {
+    margin-left: -150px;
+    display: none;
+}
+
+/*threshold of screen when is reduced*/
+
+@media (max-width: 952px){
+
+    .logo-box {
+        margin-left: 20px;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+    
+    .hide-menu-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+}
+
+/*Toogle menu*/
+@media (max-width: 858px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: black;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    .menu a {
+        display: block;
+        line-height: 30px;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .menu a:hover {
+        background-color: grey;
+    }
+
+    #chk:checked ~ ul {
+        left: 0.3em;
+    }
+}
+
+/*HEADER ANIMATION*/
+
+.header {
+    background-color: white;
+    animation-name: title;
+    animation-duration: 40s;
+}
+
+@keyframes title {
+    0% {background-color: white; }
+    25% {background-color: #6A26B6;}
+    50% {background-color: #2676B6;}
+    75% {background-color: #01BD00;}
+    100% {background-color: #F7D905;}
+}
+
+/*MAIN CONTENT-----------------------------------------------*/
+
+/*Main container styles*/
+.container {
+    margin: 50px auto;
+    /*width: 700px;*/
+}
+
+/*Container shadow*/
+.container .card {
+    box-shadow: 1px 0px 5px rgba(0,0,0,.3);
+}
+
+/*Background color of the card header and font style*/
+.container .card .card-header {
+    background: linear-gradient(orange, white);
+    border-bottom: solid 1px black;
+}
+
+.container .card .card-header h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Background color of the card body and font style*/
+.container .card-body {
+    background-color: whitesmoke;
+}
+
+.container .card .card-body .form-group label {
+    font-family: 'Arvo', serif;
+    float: left;
+    font-weight: bolder;
+}
+
+/*Background color of the card footer*/
+.container .card-footer {
+    background: linear-gradient(white, orange);
+    border-top: solid 1px black;
+}
+
+/*FOOTER---------------------------------------*/
+
+/*text styles*/
+footer .card .card-footer p {
+    font-family: 'Arvo', serif;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+/*Container animation*/
+footer .card .card-footer {
+    font-family: 'Questrial', sans-serif;
+    background-color: white;
+    animation-name: footer;
+    animation-duration: 40s;
+    margin-bottom: 0;
+}
+
+@keyframes footer {
+    0% {background-color: white;}
+    25% {background-color: #6A26B6;}
+    50% {background-color: #2676B6;}
+    75% {background-color: #01BD00;}
+    100% {background-color: #F7D905;}
+}
