@@ -158,10 +158,19 @@ header .header .logo-box {
 
 /*Container styles*/
 .container {
-    display: flexbox;
     background-color: #2676B6;
     margin: 20px auto;
     border-radius: 0.3em;
+}
+
+/*h2 styles*/
+
+.container .row .col-12 h2 {
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
 }
 
 /*Card styles*/
@@ -186,12 +195,58 @@ header .header .logo-box {
     text-align: center;
 }
 
+@media (max-width: 1200px) {
+    .container .row .col-12 h2 {
+        font-size: 25px;
+    }
+}
+
 @media (max-width: 992px) {
     .container .row .col-4 .card {
         width: 220px;
-        flex-flow: row;
+        margin-left: -5px;
     }
 
+    .container .row .col-12 h2 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 560px;
+    }
+    
+    .container .row .col-12 h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .row .col-4 .card {
+        width: 160px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 350px;
+    }
+    .container .row {
+        display: block;
+        background-color: yellow;
+    }
+
+    .container .row .col-4 .card {
+        width: 300px;
+        margin: 10px auto;
+    }
+
+    .container .row .col-12 h2 {
+        font-size: 25px;
+    }
 }
 
 /*FOOTER---------------------------------------*/
