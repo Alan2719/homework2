@@ -156,35 +156,43 @@ header .header .logo-box {
 
 /*MAIN CONTAINER------------------------------------*/
 
+/*Container styles*/
 .container {
+    display: flexbox;
     background-color: #2676B6;
     margin: 20px auto;
-    width: 60%;
     border-radius: 0.3em;
 }
 
-.container .row .col {
+/*Card styles*/
+.container .row .col-4 {
     margin: 20px 0;
     position: relative;
 }
 
-.container .row .col .card .card-body {
-    width: 200px;
-}
-
-.container .row .col .card .card-body {
+/*p container styles*/
+.container .row .col-4 .card .card-body {
     position: absolute;
     background-color: white;
-    padding: 5px;
-    text-align: center;
+    padding: 10px;
     width: 100%;
     top: 140px;
 }
 
-/*.container .row .col img{
-    width: 250px;
-    height: 200px;
-}*/
+/*Text styles*/
+.container .row .col-4 .card .card-body p {
+    color: black;
+    font-family: 'Arvo', serif;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .container .row .col-4 .card {
+        width: 220px;
+        flex-flow: row;
+    }
+
+}
 
 /*FOOTER---------------------------------------*/
 
