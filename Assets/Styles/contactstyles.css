@@ -144,6 +144,7 @@ header .header .logo-box {
     background-color: white;
     animation-name: title;
     animation-duration: 40s;
+    animation-iteration-count: 100;
 }
 
 @keyframes title {
@@ -160,6 +161,7 @@ header .header .logo-box {
 .container {
     margin: 50px auto;
     width: 700px;
+    z-index: 9999999;
 }
 
 /*Container shadow*/
@@ -197,10 +199,16 @@ header .header .logo-box {
 @media (max-width: 576px) {
     .container {
       width: 450px;
+      transition: 0.2s;
+      z-index: 9999999;
     }
   }
 
 /*FOOTER---------------------------------------*/
+
+footer {
+    z-index: 999999;
+}
 
 /*text styles*/
 footer .card .card-footer p {
@@ -213,16 +221,13 @@ footer .card .card-footer p {
 /*Container animation*/
 footer .card .card-footer {
     font-family: 'Questrial', sans-serif;
-    background-color: white;
+    background-color: black;
     animation-name: footer;
     animation-duration: 40s;
     margin-bottom: 0;
+    animation-iteration-count: 100;
 }
 
-@keyframes footer {
-    0% {background-color: white;}
-    25% {background-color: #6A26B6;}
-    50% {background-color: #2676B6;}
-    75% {background-color: #01BD00;}
-    100% {background-color: #F7D905;}
+footer .card .card-footer p {
+    color: white;
 }

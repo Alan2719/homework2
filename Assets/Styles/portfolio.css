@@ -144,6 +144,7 @@ header .header .logo-box {
     background-color: white;
     animation-name: title;
     animation-duration: 40s;
+    animation-iteration-count: 100;
 }
 
 @keyframes title {
@@ -158,7 +159,7 @@ header .header .logo-box {
 
 /*Container styles*/
 .container {
-    background-color: #2676B6;
+    background-color: rgb(108, 130, 255);
     margin: 20px auto;
     border-radius: 0.3em;
 }
@@ -222,7 +223,12 @@ header .header .logo-box {
 }
 
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
+    .container {
+        background-color: orange;
+        transition: 0.2s;
+    }
+
     .container .row .col-12 h2 {
         font-size: 25px;
     }
@@ -232,7 +238,12 @@ header .header .logo-box {
     }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
+    .container {
+        background-color: rgb(247, 96, 96);
+        transition: 0.2s;
+    }
+
     .container .row .col-4 .card {
         width: 220px;
         margin-left: -5px;
@@ -257,9 +268,11 @@ header .header .logo-box {
 
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         max-width: 560px;
+        background-color: purple;
+        transition: 0.2s;
     }
     
     .container .row .col-12 h2 {
@@ -286,9 +299,11 @@ header .header .logo-box {
 
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .container {
+        background-color: rgb(185, 224, 43);
         width: 350px;
+        transition: 0.2s;
     }
     .container .row {
         display: block;
@@ -332,16 +347,13 @@ footer .card .card-footer p {
 /*Container animation*/
 footer .card .card-footer {
     font-family: 'Questrial', sans-serif;
-    background-color: white;
+    background-color: black;
     animation-name: footer;
     animation-duration: 40s;
     margin-bottom: 0;
+    animation-iteration-count: 100;
 }
 
-@keyframes footer {
-    0% {background-color: white;}
-    25% {background-color: #6A26B6;}
-    50% {background-color: #2676B6;}
-    75% {background-color: #01BD00;}
-    100% {background-color: #F7D905;}
+footer .card .card-footer p {
+    color: white;
 }

@@ -140,6 +140,7 @@ header .header .logo-box {
     background-color: white;
     animation-name: title;
     animation-duration: 40s;
+    animation-iteration-count: 100;
 }
 
 @keyframes title {
@@ -210,6 +211,21 @@ header .header .logo-box {
     text-align: justify;
 }
 
+@media (max-width: 1050px) {
+    .container-main {
+        width: 800px;
+        transition: 0.2s;
+    }
+
+    /*.container .row .col-9 .card-body {
+        width: 400px;
+        margin-left: 20px;
+        transition: 0.2s;
+    }*/
+}
+
+
+
 /*FOOTER---------------------------------------*/
 
 /*text styles*/
@@ -222,15 +238,12 @@ footer .card .card-footer p {
 
 /*Container animation*/
 footer .card .card-footer {
-    background-color: white;
+    background-color: black;
     animation-name: footer;
     animation-duration: 40s;
+    animation-iteration-count: 100;
 }
 
-@keyframes footer {
-    0% {background-color: white;}
-    25% {background-color: #6A26B6;}
-    50% {background-color: #2676B6;}
-    75% {background-color: #01BD00;}
-    100% {background-color: #F7D905;}
+footer .card .card-footer p {
+    color: white;
 }
