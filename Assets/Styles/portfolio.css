@@ -5,7 +5,10 @@
 }
 
 body {
-    background-color: white;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /*LOGO-------------------------------------------------------*/
@@ -21,7 +24,7 @@ body {
 
 /*Logo div styles*/
 header .header .logo-box {
-    background-color: blue;
+    background-color: rgb(255, 136, 0);
     border-left: solid 1px black;
     border-right: solid 1px black;
     float: left;
@@ -72,8 +75,8 @@ header .header .logo-box {
 }
 
 /*hover of the menu links*/
-.menu a:hover,
-.show-menu-btn:hover {
+.header .menu a:hover,
+.header .show-menu-btn:hover {
     color: orange;
 }
 
@@ -81,7 +84,7 @@ header .header .logo-box {
     color: white;
 }
 
-/*display menu when the screen is reduced*/
+/*Hide menu when the screen is reduced*/
 #chk {
     margin-left: -150px;
     display: none;
@@ -125,7 +128,7 @@ header .header .logo-box {
     .menu a {
         display: block;
         line-height: 30px;
-        color: white;
+        color: white !important;
         margin-top: 20px;
     }
 
@@ -136,6 +139,11 @@ header .header .logo-box {
     #chk:checked ~ ul {
         left: 0.3em;
     }
+
+    .hide-menu-btn:hover {
+        color: yellow;
+    }
+
 }
 
 /*HEADER ANIMATION*/
@@ -144,15 +152,28 @@ header .header .logo-box {
     background-color: white;
     animation-name: title;
     animation-duration: 40s;
-    animation-iteration-count: 100;
+    animation-iteration-count: infinite;
 }
 
 @keyframes title {
-    0% {background-color: white; }
-    25% {background-color: #6A26B6;}
-    50% {background-color: #2676B6;}
-    75% {background-color: #01BD00;}
-    100% {background-color: #F7D905;}
+    0% {background-color: black;}
+    25% {background-color: white;}
+    100% {background-color: black}
+}
+
+/*Header animation*/
+
+.header .menu a, .show-menu-btn {
+    color: white;
+    animation-name: letter;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes letter {
+    0% {color: white;}
+    25% {color: grey;}
+    100% {color: white;}
 }
 
 /*MAIN CONTAINER------------------------------------*/
@@ -162,6 +183,11 @@ header .header .logo-box {
     background-color: rgb(108, 130, 255);
     margin: 20px auto;
     border-radius: 0.3em;
+    padding: 20px;
+}
+
+.container .row .box {
+    margin-bottom: 10px;
 }
 
 
@@ -194,7 +220,7 @@ header .header .logo-box {
 }
 
 /*p container styles*/
-.container .row .col-4 .card .card-body {
+.container .row .box .card .card-body {
     position: absolute;
     background-color: white;
     padding: 10px;
@@ -203,7 +229,7 @@ header .header .logo-box {
 }
 
 /*Text styles*/
-.container .row .col-4 .card .card-body p {
+.container .row .box .card .card-body p {
     color: black;
     font-family: 'Arvo', serif;
     text-align: center;
@@ -211,13 +237,13 @@ header .header .logo-box {
 }
 
 /*Scale transition*/
-.container .row .col-4 .card .card-img-top {
+.container .row .box .card .card-img-top {
     transition: transform 0.2s;
     opacity: 0.8;
 }
 
 /*Hover to the image*/
-.container .row .col-4 .card .card-img-top:hover {
+.container .row .box .card .card-img-top:hover {
     transform: scale(1.05);
     opacity: 1;
 }
@@ -234,7 +260,11 @@ header .header .logo-box {
     }
 
     .container .row .col-12 .title {
-        width: 920px;
+        width: 100%;
+    }
+
+    .container .row .box .card .card-body p {
+        font-size: 18px;
     }
 }
 
@@ -253,16 +283,16 @@ header .header .logo-box {
         font-size: 20px;
     }
 
-    .container .row .col-4 .card .card-body {
+    .container .row .box .card .card-body {
         margin-top: -50px;
     }
 
-    .container .row .col-4 .card .card-body p {
+    .container .row .box .card .card-body p {
         font-size: 15px;
     }
 
     .container .row .col-12 .title {
-        width: 700px;
+        width: 100%;
         margin-left: -5px;
     }
 
@@ -270,7 +300,6 @@ header .header .logo-box {
 
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 560px;
         background-color: purple;
         transition: 0.2s;
     }
@@ -284,16 +313,16 @@ header .header .logo-box {
         margin: 0 auto;
     }
 
-    .container .row .col-4 .card .card-body {
+    .container .row .box .card .card-body {
         margin-top: -70px;
     }
 
-    .container .row .col-4 .card .card-body p {
+    .container .row .box .card .card-body p {
         font-size: 12px;
     }
 
     .container .row .col-12 .title {
-        width: 540px;
+        width: 100%;
         margin-left: -5px;
     }
 
@@ -301,8 +330,8 @@ header .header .logo-box {
 
 @media screen and (max-width: 576px) {
     .container {
+        width: 90%;
         background-color: rgb(185, 224, 43);
-        width: 350px;
         transition: 0.2s;
     }
     .container .row {
@@ -310,27 +339,25 @@ header .header .logo-box {
         padding: 5px 0;
     }
 
-    .container .row .col-4 .card {
-        width: 300px;
-        margin: 10px 0 0 8px;
+    .container .row .box .card {
+        width: 350px;
+        margin-left: 15px;
     }
 
     .container .row .col-12 h2 {
         font-size: 25px;
     }
 
-    .container .row .col-4 .card .card-body {
+    .container .row .box .card .card-body {
         margin-top: 10px;
     }
 
-    .container .row .col-4 .card .card-body p {
+    .container .row .box .card .card-body p {
         font-size: 18px;
     }
 
     .container .row .col-12 .title {
-        width: 330px;
-        margin-left: -5px;
-        margin-top: 5px;
+        width: 100%;
     }
 }
 
@@ -341,19 +368,15 @@ footer .card .card-footer p {
     font-family: 'Arvo', serif;
     text-align: center;
     font-size: 18px;
-    color: black;
-}
-
-/*Container animation*/
-footer .card .card-footer {
-    font-family: 'Questrial', sans-serif;
-    background-color: black;
-    animation-name: footer;
-    animation-duration: 40s;
-    margin-bottom: 0;
-    animation-iteration-count: 100;
-}
-
-footer .card .card-footer p {
     color: white;
+    
+}
+
+footer .card .card-footer {
+    background-color: black;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
 }

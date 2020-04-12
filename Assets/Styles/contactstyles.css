@@ -5,7 +5,10 @@
 }
 
 body {
-    background-color: white;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /*LOGO-------------------------------------------------------*/
@@ -21,7 +24,7 @@ body {
 
 /*Logo div styles*/
 header .header .logo-box {
-    background-color: blue;
+    background-color: rgb(255, 136, 0);
     border-left: solid 1px black;
     border-right: solid 1px black;
     float: left;
@@ -136,23 +139,38 @@ header .header .logo-box {
     #chk:checked ~ ul {
         left: 0.3em;
     }
+
+    .hide-menu-btn:hover {
+        color: yellow;
+    }
 }
 
-/*HEADER ANIMATION*/
+/*Header animation*/
 
 .header {
     background-color: white;
     animation-name: title;
     animation-duration: 40s;
-    animation-iteration-count: 100;
+    animation-iteration-count: infinite;
 }
 
 @keyframes title {
-    0% {background-color: white; }
-    25% {background-color: #6A26B6;}
-    50% {background-color: #2676B6;}
-    75% {background-color: #01BD00;}
-    100% {background-color: #F7D905;}
+    0% {background-color: black;}
+    25% {background-color: white;}
+    100% {background-color: black}
+}
+
+.header .menu a, .show-menu-btn {
+    color: white;
+    animation-name: letter;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes letter {
+    0% {color: white;}
+    25% {color: grey;}
+    100% {color: white;}
 }
 
 /*MAIN CONTENT-----------------------------------------------*/
@@ -215,19 +233,15 @@ footer .card .card-footer p {
     font-family: 'Arvo', serif;
     text-align: center;
     font-size: 18px;
-    color: black;
-}
-
-/*Container animation*/
-footer .card .card-footer {
-    font-family: 'Questrial', sans-serif;
-    background-color: black;
-    animation-name: footer;
-    animation-duration: 40s;
-    margin-bottom: 0;
-    animation-iteration-count: 100;
-}
-
-footer .card .card-footer p {
     color: white;
+}
+
+footer .card .card-footer  {
+    background-color: black;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
 }

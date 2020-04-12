@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 /*LOGO-------------------------------------------------------*/
 
 /*Header style*/
@@ -17,7 +24,7 @@
 
 /*Logo div styles*/
 header .header .logo-box {
-    background-color: blue;
+    background-color: rgb(255, 136, 0);
     border-left: solid 1px black;
     border-right: solid 1px black;
     float: left;
@@ -132,6 +139,10 @@ header .header .logo-box {
     #chk:checked ~ ul {
         left: 0.3em;
     }
+
+    .hide-menu-btn:hover {
+        color: yellow;
+    }
 }
 
 /*HEADER ANIMATION*/
@@ -140,15 +151,26 @@ header .header .logo-box {
     background-color: white;
     animation-name: title;
     animation-duration: 40s;
-    animation-iteration-count: 100;
+    animation-iteration-count: infinite;
 }
 
 @keyframes title {
-    0% {background-color: white; }
-    25% {background-color: #6A26B6;}
-    50% {background-color: #2676B6;}
-    75% {background-color: #01BD00;}
-    100% {background-color: #F7D905;}
+    0% {background-color: black;}
+    25% {background-color: white;}
+    100% {background-color: black}
+}
+
+.header .menu a, .show-menu-btn {
+    color: white;
+    animation-name: letter;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes letter {
+    0% {color: white;}
+    25% {color: grey;}
+    100% {color: white;}
 }
 
 /*MAIN CONTENT------------------------------------*/
@@ -168,7 +190,7 @@ header .header .logo-box {
 
 /*image properties*/
 .container-main .row .col-3 .card .card-img-top {
-    width: 220px;
+    width: 100%;
     height: 300px;
     border: none;
 }
@@ -181,11 +203,15 @@ header .header .logo-box {
     color: white;
 }
 
-.container-main .row .col-9:hover {
-    background-color: rgb(245, 146, 53);
+.container-main .row .col-8:hover {
+    background-color: rgba(53, 207, 245, 0.829);
     transition-duration: 0.5s;
     border-radius: 0.3em;
-    color: white;
+    color: black;
+}
+
+.container-main .row .last-row {
+    margin-top: 5px;
 }
 
 .container-main .row .last-row:hover {
@@ -195,13 +221,13 @@ header .header .logo-box {
     color: white;
 }
 
-/*h2, col-9 and col-12 styles*/
+/*h2, col-8 and col-12 styles*/
 .container-main .row .about h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
 }
 
-.container-main .row .col-9 .card-body p{
+.container-main .row .col-8 .card-text {
     font-family: 'IBM Plex Serif', serif;
     text-align: justify;
 }
@@ -211,39 +237,30 @@ header .header .logo-box {
     text-align: justify;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
     .container-main {
-        width: 800px;
+        width: 80%;
         transition: 0.2s;
+        font-size: 15px;
     }
-
-    /*.container .row .col-9 .card-body {
-        width: 400px;
-        margin-left: 20px;
-        transition: 0.2s;
-    }*/
 }
-
-
 
 /*FOOTER---------------------------------------*/
 
 /*text styles*/
 footer .card .card-footer p {
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Arvo', serif;
     text-align: center;
     font-size: 18px;
-    color: black;
-}
-
-/*Container animation*/
-footer .card .card-footer {
-    background-color: black;
-    animation-name: footer;
-    animation-duration: 40s;
-    animation-iteration-count: 100;
-}
-
-footer .card .card-footer p {
     color: white;
+}
+
+footer .card .card-footer  {
+    background-color: black;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
 }
