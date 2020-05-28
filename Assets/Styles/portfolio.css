@@ -5,10 +5,7 @@
 }
 
 body {
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: rgb(190, 186, 186);
 }
 
 /*LOGO-------------------------------------------------------*/
@@ -17,19 +14,17 @@ body {
 .header {
     height: 100px;
     padding: 0 30px;
-    color: black;
+    color: white;
     font-size: 20px;
-    box-shadow: 1px 0px 5px rgba(0,0,0,.3);
+    background-color: rgb(190, 186, 186);
 }
 
 /*Logo div styles*/
 header .header .logo-box {
-    background-color: rgb(255, 136, 0);
-    border-left: solid 1px black;
-    border-right: solid 1px black;
+    background-color: rgb(190, 186, 186);
+    color: black;
     float: left;
     height: 100px;
-    box-shadow: 1px 0px 5px rgba(0,0,0,.3);
 }
 
 /*Logo h2 styles*/
@@ -46,7 +41,7 @@ header .header .logo-box {
 .menu {
     float: right;
     padding: 35px 0;
-    z-index: 3000   ;
+    z-index: 3000;
 }
 
 /*menu links styles*/
@@ -77,7 +72,7 @@ header .header .logo-box {
 /*hover of the menu links*/
 .header .menu a:hover,
 .header .show-menu-btn:hover {
-    color: orange;
+    color: rgb(0, 4, 255);
 }
 
 .hide-menu-btn {
@@ -146,43 +141,11 @@ header .header .logo-box {
 
 }
 
-/*HEADER ANIMATION*/
-
-.header {
-    background-color: white;
-    animation-name: title;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes title {
-    0% {background-color: black;}
-    25% {background-color: white;}
-    100% {background-color: black}
-}
-
-/*Header animation*/
-
-.header .menu a, .show-menu-btn {
-    color: white;
-    animation-name: letter;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes letter {
-    0% {color: white;}
-    25% {color: grey;}
-    100% {color: white;}
-}
-
 /*MAIN CONTAINER------------------------------------*/
 
 /*Container styles*/
 .container {
-    background-color: rgb(108, 130, 255);
     margin: 20px auto;
-    border-radius: 0.3em;
     padding: 20px;
 }
 
@@ -208,9 +171,13 @@ header .header .logo-box {
 .container .row .col-12 .title {
     width: 1100px;
     margin-top: 10px;
-    background-color: white;
+    background-color: rgb(252, 110, 85);
     margin-left: 5px;
     border-radius: 0.3em;
+}
+
+.title h2 {
+    font-weight: bolder;
 }
 
 /*Card styles*/
@@ -219,6 +186,11 @@ header .header .logo-box {
     position: relative;
 }
 
+/*.form {
+    width: 100%;
+    background-color: red;
+}*/
+
 /*p container styles*/
 .container .row .box .card .card-body {
     position: absolute;
@@ -226,6 +198,10 @@ header .header .logo-box {
     padding: 10px;
     width: 100%;
     top: 140px;
+}
+
+.data {
+    width: 100%;
 }
 
 /*Text styles*/
@@ -251,7 +227,6 @@ header .header .logo-box {
 
 @media screen and (max-width: 1200px) {
     .container {
-        background-color: orange;
         transition: 0.2s;
     }
 
@@ -270,7 +245,6 @@ header .header .logo-box {
 
 @media screen and (max-width: 992px) {
     .container {
-        background-color: rgb(247, 96, 96);
         transition: 0.2s;
     }
 
@@ -300,7 +274,6 @@ header .header .logo-box {
 
 @media screen and (max-width: 768px) {
     .container {
-        background-color: purple;
         transition: 0.2s;
     }
     
@@ -331,7 +304,6 @@ header .header .logo-box {
 @media screen and (max-width: 576px) {
     .container {
         width: 90%;
-        background-color: rgb(185, 224, 43);
         transition: 0.2s;
     }
     .container .row {
@@ -361,6 +333,18 @@ header .header .logo-box {
     }
 }
 
+@media (max-width: 575px) {
+    .image {
+        flex: 100%;
+        max-width: 100% !important;
+    }
+
+    .information {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
 /*FOOTER---------------------------------------*/
 
 /*text styles*/
@@ -379,4 +363,51 @@ footer .card .card-footer {
 footer {
     position: relative;
     bottom: 0px;
+}
+
+/*CONTAINER TO DISPLAY THE INFORMATION*/
+.display {
+    display: none;
+    margin-bottom: 25px;
+}
+
+.display h4 {
+    font-family: 'Arvo', serif;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.display p {
+    font-family: 'Arvo', serif;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 35px;
+}
+
+#link {
+    float: right;
+}
+
+#close {
+    float: left;
+}
+
+.display .row {
+    margin-bottom: 8px;
+}
+
+.password-generator, .culture-quiz, .day-planner, 
+.weather-dashboard, .band-tracker {
+    display: none;
+}
+
+.password-generator, .culture-quiz, .day-planner, 
+.weather-dashboard, .band-tracker img {
+    width: 100%;
+    height: auto;
+}
+
+.display {
+    background-color: white;
+    border-radius: 0.3em;
 }

@@ -38,7 +38,7 @@
     <div class="row">
       <div class="col-12">
         <section class="title">
-          <h2>Portfolio</h2>
+          <h2>My Portfolio</h2>
         </section>
       </div>
     </div>
@@ -52,52 +52,114 @@
     <div class="row">
       <div class="col-lg-4 col-6 box">
         <div class="card">
-          <a href="#"><img src="./Assets/Images/img2.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <a href="#" target="_blank" id="password-generator"><img src="./Assets/Images/password.jpg" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <p class="card-text">Rock, Paper, Scissors</p>
+            <p class="card-text">Password Generator</p>
           </div>
         </div>
       </div>
 
       <div class="col-lg-4 col-6 box">
         <div class="card">
-          <a href="#"><img src="./Assets/Images/img2.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <a href="#" target="_blank" id="culture-quiz"><img src="./Assets/Images/test.png" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <p class="card-text">Rock, Paper, Scissors</p>
+            <p class="card-text">General Culture Quiz</p>
           </div>
         </div>
       </div>
 
       <div class="col-lg-4 col-6 box">
         <div class="card">
-          <a href=""><img src="./Assets/Images/img2.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <a href="#" target="_blank" id="day-planner" data-index="2"><img src="./Assets/Images/planner.jpg" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <p class="card-text">Rock, Paper, Scissors</p>
+            <p class="card-text">Day Planner</p>
           </div>
         </div>
       </div>
     <!--</div>-->
-
+      
     <!--<div class="row">-->
       <div class="col-lg-4 col-6 box">
         <div class="card">
-          <a href="#"><img src="./Assets/Images/img2.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <a href="#" target="_blank" id="weather-dashboard"><img src="./Assets/Images/weather.jpeg" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <p class="card-text">Rock, Paper, Scissors</p>
+            <p class="card-text">Weather Dashboard</p>
           </div>
         </div>
       </div>
 
       <div class="col-lg-4 col-6 box">
         <div class="card">
-          <a href="#"><img src="./Assets/Images/img2.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <a href="#" target="_blank" id="band-tracker"><img src="./Assets/Images/logo.jpg" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <p class="card-text">Rock, Paper, Scissors</p>
+            <p class="card-text">Band Tracker</p>
           </div>
         </div>
       </div>
-
   </main>
+
+  <div class="display container">
+    <div class="row">
+      <h4 class="password-generator">Password Generator</h4>
+      <h4 class="culture-quiz">General Culture Quiz</h4>
+      <h4 class="day-planner">Day Planner</h4>
+      <h4 class="weather-dashboard">Weather Dashboard</h4>
+      <h4 class="band-tracker">Band Tracker</h4>
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row info">
+      <div class="image col-sm-12 col-lg-3 col-xl-3 col-3">
+        <img class="password-generator" src="./Assets/Images/password.jpg" target="_blank" class="card-img-top" alt="...">
+        <img class="culture-quiz" src="./Assets/Images/test.png" target="_blank" class="card-img-top" alt="...">
+        <img class="day-planner" src="./Assets/Images/planner.jpg" target="_blank" class="card-img-top" alt="...">
+        <img class="weather-dashboard" src="./Assets/Images/weather.jpeg" target="_blank" class="card-img-top" alt="...">
+        <img class="band-tracker" src="./Assets/Images/logo.jpg" target="_blank" class="card-img-top" alt="...">
+      </div>
+      <div class="information col-sm-12 col-lg-9 col-xl-9 col-9">
+        <p class="password-generator">The purpose of this activity
+          was to create a password generator. The user is able to
+          decide which type of characters the password will have (uppercase
+          letters, lowercase letters, numbers and special characters).
+          The user is also able to decide the length of the password between
+          7 to 120 characters. 
+        </p>
+        <p class="culture-quiz">In this activity, a general culture
+          quiz was created. The player only has 20 seconds to answer
+          5 questions. Every time a question is correct , the player
+          earns 5 extra seconds. If the answer is incorrect, the player looses
+          5 seconds. The final score is the seconds left in the timer.
+          You are able to save your score by typing your name.
+        </p>
+        <p class="day-planner">The aim of this activity was to create a 
+          day planner to use it in your daily work.
+          With this planner you are able to schedule
+          your to do list per hour as well as modify or erase them
+          once you have finished. The colors indicate
+          if you are on time or is to late to late
+          to perform the task.
+        </p>
+        <p class="weather-dashboard">The purpose of this activity was to 
+          create a weather dashboard using the OpenWeather API. By searching
+          the city, you are able to view the current temperature, wind speed, 
+          UV index, and Humidity. Also, you are able to visualize a 5 day
+          forecast. The cities you have already searched are stored in case 
+          you want to check them again.
+        </p>
+        <p class="band-tracker">In our first project, my team and I created
+          the Band Tracker website. In this website you are able to create an
+          account and login to the site. The principal purpose of this site 
+          is to look for your favorite bands and have some information of them
+          like the monthly listeners, playcount and the upcoming events.
+          You are able to follow or unfollow your favorite artist. Finally, you
+          can be redirected to another site to buy tickets from the next concert. 
+        </p>
+      </div>
+      <button type="button" class="btn btn-danger" id="close"><i class="fas fa-times"></i></button>
+      <a href="#" type="button" class="btn btn-primary" target="_blank" id="link"><i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
 
     <footer>
         <div class="card text-center">
@@ -106,5 +168,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/c7b286b32e.js" crossorigin="anonymous"></script>
+    <script src="portfolio.js"></script>
 </body>
 </html>

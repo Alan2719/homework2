@@ -9,7 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Assets/Styles/contactstyles.css">
-    <link rel="stylesheet" href="./Assets/Styles/animation.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://kit.fontawesome.com/c7b286b32e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arvo|IBM+Plex+Serif|Montserrat&display=swap" rel="stylesheet">
@@ -35,57 +34,60 @@
             </ul>
         </section>
     </header>
-
-    <section class="ripple">
-        <div class="circle xxlarge shade-3">
-        </div>
-        <div class="circle xlarge shade-2">
-        </div>
-        <div class="circle large shade-1">
-        </div>
-        <div class="circle medium shade-2"> 
-        </div>
-        <div class="circle small shade-1"> 
-        </div>
-        <div class="circle xxlarge-2 shade-3"> 
-        </div>
-        <div class="circle xlarge-2 shade-2"> 
-        </div>
-        <div class="circle large-2 shade-3"> 
-        </div>
-        <div class="circle medium-2 shade-2"> 
-        </div>
-        <div class="circle small-2 shade-1"> 
-        </div>
-    </section>
-
+     
     <main class="container">
-        <div class="card text-center">
-            <div class="card-header">
-                <h2>Contact</h2>
+        <div class="row line">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <aside class="aside">
+                    <ul class="contacts">
+                        <li><i class="fas fa-envelope"></i><span> alan2719.ahcv@gmail.com</span></li>
+                        <li><i class="fab fa-linkedin"></i><span> Alan Velázquez Martínez</span></li>
+                        <li><i class="fab fa-github"></i><span> Alan2719</span></li>
+                    </ul>
+                </aside>
             </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">Name</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Write your name">
+
+        
+            <div class="form col-xl-8 col-lg-8 col-md-6 col-sm-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h2>Send a message</h2>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Write your email">
+                    <div class="card-body">
+                        <form class="data">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Name</label>
+                                <input type="text" class="form-control name" id="name exampleFormControlInput1" placeholder="Write your name">
+                                <div class="invalid-name">
+                                    Please provide a valid name.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Email address</label>
+                                <input type="email" class="form-control mail" id="mail exampleFormControlInput1" placeholder="Write your email">
+                                <div class="invalid-mail">
+                                    Please provide a valid email.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Message</label>
+                                <textarea class="form-control text" id="text exampleFormControlTextarea1" rows="3" placeholder="Leave a message"></textarea>
+                                <div class="invalid-text">
+                                    This area cannot be empty.
+                                </div>
+                                <div class="valid-text">
+                                    Your message was sent, thank you!
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Message</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Leave a message"></textarea>
+                    <div class="card-footer text-muted">
+                        <button id="submit" type="button" class="btn btn-primary">Submit</button>
                     </div>
-                  </form>
-            </div>
-            <div class="card-footer text-muted">
-                <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
             </div>
         </div>
     </main>
-      
 
     <footer >
         <div class="card text-center">
@@ -94,6 +96,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/c7b286b32e.js" crossorigin="anonymous"></script>
+    <script src="contact.js"></script>
 
 </body>
 </html>
