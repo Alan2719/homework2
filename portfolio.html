@@ -34,7 +34,7 @@
     </section>
   </header>
 
-  <main class="container">
+  <main class="container projects">
     <div class="row">
       <div class="col-12">
         <section class="title">
@@ -76,9 +76,7 @@
           </div>
         </div>
       </div>
-    <!--</div>-->
-      
-    <!--<div class="row">-->
+    
       <div class="col-lg-4 col-6 box">
         <div class="card">
           <a href="#" target="_blank" id="weather-dashboard"><img src="./Assets/Images/weather.jpeg" target="_blank" class="card-img-top" alt="..."></a>
@@ -96,26 +94,79 @@
           </div>
         </div>
       </div>
+
+      <div class="col-lg-4 col-6 box">
+        <div class="card">
+          <a href="#" target="_blank" id="team-generator"><img src="./Assets/Images/team-generator.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <p class="card-text">Team Generator</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-6 box">
+        <div class="card">
+          <a href="#" target="_blank" id="note-taker"><img src="./Assets/Images/noteTaker.png" target="_blank" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <p class="card-text">Note Taker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-6 box">
+        <div class="card">
+          <a href="#" target="_blank" id="readme"><img src="./Assets/Images/readme.png" target="_blank" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <p class="card-text">Readme Generator</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-6 box">
+        <div class="card">
+          <a href="#" target="_blank" id="employeesDB"><img src="./Assets/Images/employeesDB.JPG" target="_blank" class="card-img-top" alt="..."></a>
+          <div class="card-body card-body-cont">
+            <p class="card-text">Employees Tracker</p>
+          </div>
+        </div>
+      </div>
+      
   </main>
+
+</div> 
+    
+<div class="overlay"></div>
+
 
   <div class="display container">
     <div class="row">
-      <h4 class="password-generator">Password Generator</h4>
-      <h4 class="culture-quiz">General Culture Quiz</h4>
-      <h4 class="day-planner">Day Planner</h4>
-      <h4 class="weather-dashboard">Weather Dashboard</h4>
-      <h4 class="band-tracker">Band Tracker</h4>
+      <div class="col-12">
+        <button type="button" class="btn btn-danger" id="close"><i class="fas fa-times"></i></button>
+        <h4 class="password-generator modal-header">Password Generator</h4>
+        <h4 class="culture-quiz modal-header">General Culture Quiz</h4>
+        <h4 class="day-planner modal-header">Day Planner</h4>
+        <h4 class="weather-dashboard modal-header">Weather Dashboard</h4>
+        <h4 class="band-tracker modal-header">Band Tracker</h4>
+        <h4 class="team-generator modal-header">Team Generator</h4>
+        <h4 class="note-taker modal-header">Note Taker</h4>
+        <h4 class="readme modal-header">Readme Generator</h4>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-12">
         <hr>
       </div>
     </div>
     <div class="row info">
-      <div class="image col-sm-12 col-lg-3 col-xl-3 col-3">
+      <div class="image col-sm-12 col-md-6 col-lg-3 col-xl-3 col-3">
         <img class="password-generator" src="./Assets/Images/password.jpg" target="_blank" class="card-img-top" alt="...">
         <img class="culture-quiz" src="./Assets/Images/test.png" target="_blank" class="card-img-top" alt="...">
         <img class="day-planner" src="./Assets/Images/planner.jpg" target="_blank" class="card-img-top" alt="...">
         <img class="weather-dashboard" src="./Assets/Images/weather.jpeg" target="_blank" class="card-img-top" alt="...">
         <img class="band-tracker" src="./Assets/Images/logo.jpg" target="_blank" class="card-img-top" alt="...">
+        <img class="team-generator" src="./Assets/Images/team-generator.jpg" target="_blank" class="card-img-top" alt="...">
+        <img class="note-taker" src="./Assets/Images/noteTaker.png" target="_blank" class="card-img-top" alt="...">
+        <img class="readme" src="./Assets/Images/readme.png" target="_blank" class="card-img-top" alt="...">
       </div>
       <div class="information col-sm-12 col-lg-9 col-xl-9 col-9">
         <p class="password-generator">The purpose of this activity
@@ -155,9 +206,23 @@
           You are able to follow or unfollow your favorite artist. Finally, you
           can be redirected to another site to buy tickets from the next concert. 
         </p>
+        <p class="team-generator">The aim of this application is to create an organization
+          chart in which the user can create three types of positions, a manager, an engineer and an
+          intern. Using the npm package inquirer, the user is asked fills the worker profile with different 
+          information depending of the position. At the end, an html file is created with the organization chart.
+        </p>
+        <p class="note-taker">The purpose of this task was to create a note taker. This is 
+          the first activity in which a server was used as well as NodeJs, and express
+          to develop the backend. The application lets the user to save notes. When a note is no longer
+          useful, you can delete it. The deployment of this application was made in Heroku.  
+        </p>
+        <p class="readme">In this task a readme file generator was created. When the application 
+          is running, the user needs to insert the title of the readme file, description, installation, usage, 
+          license, and some other questions. In this case, the package inquirer is used. Also, promises 
+          are used to the application run correctly. 
+        </p>
       </div>
     </div>
-    <button type="button" class="btn btn-danger" id="close"><i class="fas fa-times"></i></button>
       <a href="#" type="button" class="btn btn-primary" target="_blank" id="link"><i class="fas fa-arrow-right"></i></a>
   </div>
 
