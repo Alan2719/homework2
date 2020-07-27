@@ -4,6 +4,9 @@ function hideAll() {
     $(".day-planner").hide();
     $(".weather-dashboard").hide();
     $(".band-tracker").hide();
+    $(".note-taker").hide();
+    $(".readme").hide();
+    $(".team-generator").hide();
 }
 
 $("#password-generator").on('click',function(event){
@@ -12,8 +15,8 @@ $("#password-generator").on('click',function(event){
     console.log($(this));
     $(".display").css('display','block');
     $(".password-generator").css('display','block');
-    $("#link").attr('href','https://alan2719.github.io/homework3/index.html');
-})
+    $("#link").attr('href','https://alan2719.github.io/PasswordGenerator/index.html');
+});
 
 $("#culture-quiz").on('click',function(event){
     event.preventDefault();
@@ -21,8 +24,8 @@ $("#culture-quiz").on('click',function(event){
     console.log($(this));
     $(".display").css('display','block');
     $(".culture-quiz").css('display','block');
-    $("#link").attr('href','https://alan2719.github.io/homework4/index.html');
-})
+    $("#link").attr('href','https://alan2719.github.io/GeneralCultureQuiz/index.html');
+});
 
 $("#day-planner").on('click',function(event){
     event.preventDefault();
@@ -30,8 +33,8 @@ $("#day-planner").on('click',function(event){
     console.log($(this));
     $(".display").css('display','block');
     $(".day-planner").css('display','block');
-    $("#link").attr('href','https://alan2719.github.io/homework5/index.html');
-})
+    $("#link").attr('href','https://alan2719.github.io/DayPlanner/index.html');
+});
 
 $("#weather-dashboard").on('click',function(event){
     event.preventDefault();
@@ -39,8 +42,8 @@ $("#weather-dashboard").on('click',function(event){
     console.log($(this));
     $(".display").css('display','block');
     $(".weather-dashboard").css('display','block');
-    $("#link").attr('href','https://alan2719.github.io/homework6/index.html');
-})
+    $("#link").attr('href','https://alan2719.github.io/WeatherDashboard/index.html');
+});
 
 $("#band-tracker").on('click',function(event){
     event.preventDefault();
@@ -48,8 +51,35 @@ $("#band-tracker").on('click',function(event){
     console.log($(this));
     $(".display").css('display','block');
     $(".band-tracker").css('display','block');
-    $("#link").attr('href','    https://alan2719.github.io/BandTracker/index.html');
-})
+    $("#link").attr('href','https://alan2719.github.io/BandTracker/index.html');
+});
+
+$("#note-taker").on('click',function(event){
+    event.preventDefault();
+    hideAll();
+    console.log($(this));
+    $(".display").css('display','block');
+    $(".note-taker").css('display','block');
+    $("#link").attr('href','https://shrouded-thicket-71970.herokuapp.com/');
+});
+
+$("#readme").on('click',function(event){
+    event.preventDefault();
+    hideAll();
+    console.log($(this));
+    $(".display").css('display','block');
+    $(".readme").css('display','block');
+    $("#link").attr('href','https://github.com/Alan2719/ReadmeGenerator');
+});
+
+$("#team-generator").on('click',function(event){
+    event.preventDefault();
+    hideAll();
+    console.log($(this));
+    $(".display").css('display','block');
+    $(".team-generator").css('display','block');
+    $("#link").attr('href','https://github.com/Alan2719/ReadmeGenerator');
+});
 
 $("#close").on('click',function(){
    hideAll();
