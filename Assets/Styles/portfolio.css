@@ -474,3 +474,58 @@ footer {
         font-size: 15px;
     }
 }
+
+/*-------------------------------------*/
+
+.text-show {
+    text-align: center;
+    font-weight: bold;
+}
+
+.arrow-cont {
+    border-radius: 100%;
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.show-more-btn {
+    background-color: transparent;
+    margin: 20px 24px;
+    border: none;
+}
+
+.show-less-btn {
+    background-color: transparent;
+    margin: 20px 24px;
+    border: none;
+}
+
+.fa-arrow-down {
+    font-size: 40px;
+    color: white;
+}
+
+.fa-arrow-up {
+    font-size: 40px;
+    color: white;
+}
+
+.no-display {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.display-content {
+    display: block;
+    transition: 5s;
+    scroll-behavior: smooth;
+}
+
+.show-less {
+    display: none;
+}

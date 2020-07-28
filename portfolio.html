@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arvo|IBM+Plex+Serif|Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header id="main-header">
     <section class="header">
       <div class="logo-box">
         <h2 class="logo">Take a look</h2>
@@ -24,9 +24,9 @@
       </label>
 
       <ul class="menu">
-        <a href="index.html#" target="_blank">About</a>
-        <a href="portfolio.html" target="_blank">Portfolio</a> 
-        <a href="contact.html" target="_blank">Contact</a>
+        <a href="index.html#">About</a>
+        <a href="portfolio.html">Portfolio</a> 
+        <a href="contact.html">Contact</a>
         <label for="chk" class="hide-menu-btn">
           <i class="fas fa-times-circle"></i>
         </label>
@@ -34,7 +34,7 @@
     </section>
   </header>
 
-  <main class="container projects">
+  <main class="container projects" id="main-cont">
     <div class="row">
       <div class="col-12">
         <section class="title">
@@ -88,7 +88,7 @@
 
       <div class="col-lg-4 col-6 box">
         <div class="card">
-          <a href="#" target="_blank" id="band-tracker"><img src="./Assets/Images/logo.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <a href="#" target="_blank" id="band-tracker"><img src="./Assets/Images/band-tracker.png" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
             <p class="card-text">Band Tracker</p>
           </div>
@@ -104,7 +104,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-6 box">
+      <div class="col-lg-4 col-6 box no-display" id="handshake2">
         <div class="card">
           <a href="#" target="_blank" id="note-taker"><img src="./Assets/Images/noteTaker.png" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
@@ -113,7 +113,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-6 box">
+      <div class="col-lg-4 col-6 box no-display">
         <div class="card">
           <a href="#" target="_blank" id="readme"><img src="./Assets/Images/readme.png" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body">
@@ -122,7 +122,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-6 box">
+      <div class="col-lg-4 col-6 box no-display">
         <div class="card">
           <a href="#" target="_blank" id="employeesDB"><img src="./Assets/Images/employeesDB.JPG" target="_blank" class="card-img-top" alt="..."></a>
           <div class="card-body card-body-cont">
@@ -130,12 +130,50 @@
           </div>
         </div>
       </div>
+
+      <div class="col-lg-4 col-6 box no-display">
+        <div class="card">
+          <a href="#" target="_blank" id="burger"><img src="./Assets/Images/burger.jpg" target="_blank" class="card-img-top" alt="..."></a>
+          <div class="card-body card-body-cont">
+            <p class="card-text">Eat-da-burger</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-6 box no-display" id="smooth-scroll">
+        <div class="card">
+          <a href="#" target="_blank" id="handshake"><img src="./Assets/Images/handshake.JPG" target="_blank" class="card-img-top" alt="..."></a>
+          <div class="card-body card-body-cont">
+            <p class="card-text">Handshake</p>
+          </div>
+        </div>
+      </div>
       
+      <div class="show-more container" id="btn-cont">
+        <div class="arrow-cont">
+          <button id="show-more" class="show-more-btn"><a href="#smooth-scroll"><i class="fas fa-arrow-down"></i></a></button>
+        </div>
+        <p class="text-show">Show More</p>
+
+        <!--<div class="arrow-cont no-display">
+          <button id="show-less" class="show-less-btn"><a href="#btn-cont"><i class="fas fa-arrow-up"></i></a></button>
+        </div>
+        <p class="text-show no-display">Show Less</p>
+      </div>-->
+      </div>
+
+      <div class="show-less container" id="btn-cont-less">
+        <div class="arrow-cont">
+          <button id="show-less" class="show-less-btn"><a href="#main-header"><i class="fas fa-arrow-up"></i></a></button>
+        </div>
+        <p class="text-show">Show Less</p>
+      </div>
   </main>
 
 </div> 
     
 <div class="overlay"></div>
+
 
 
   <div class="display container">
@@ -150,6 +188,9 @@
         <h4 class="team-generator modal-header">Team Generator</h4>
         <h4 class="note-taker modal-header">Note Taker</h4>
         <h4 class="readme modal-header">Readme Generator</h4>
+        <h4 class="employeesDB modal-header">Employees Tracker</h4>
+        <h4 class="burger modal-header">Eat-da-burger</h4>
+        <h4 class="handshake modal-header">Handshake</h4>
       </div>
     </div>
     <div class="row">
@@ -167,6 +208,9 @@
         <img class="team-generator" src="./Assets/Images/team-generator.jpg" target="_blank" class="card-img-top" alt="...">
         <img class="note-taker" src="./Assets/Images/noteTaker.png" target="_blank" class="card-img-top" alt="...">
         <img class="readme" src="./Assets/Images/readme.png" target="_blank" class="card-img-top" alt="...">
+        <img class="employeesDB" src="./Assets/Images/employeesDB.JPG" target="_blank" class="card-img-top" alt="...">
+        <img class="burger" src="./Assets/Images/burger.jpg" target="_blank" class="card-img-top" alt="...">
+        <img class="handshake" src="./Assets/Images/handshake.JPG" target="_blank" class="card-img-top" alt="...">
       </div>
       <div class="information col-sm-12 col-lg-9 col-xl-9 col-9">
         <p class="password-generator">The purpose of this activity
@@ -221,12 +265,27 @@
           license, and some other questions. In this case, the package inquirer is used. Also, promises 
           are used to the application run correctly. 
         </p>
+        <p class="employeesDB">In this application, a company database was created. The database contains 3 tables, department, 
+          position, and employee. Using inquirer and MySQL, the user is able to create new departments, roles, and insert new employees
+          to the database. The application is also able to display just the information the user want to see intercacting with the database.
+        </p>
+        <p class="burger">In this application, the user is able to introduce their favorite burgers, save in the 
+          database, and view them in the frontend. The user is able to eat that burger with a button created when 
+          the name of the burger is displayed in the frontend. Once the burger, is eaten, it is displayed in the right side
+          of the screen. For this application, I used express, handlebars, NodeJs, and MySQL. The application was desployed in 
+          Heroku.
+        </p>
+        <p class="handshake">In our project 2, my team and I created an application where different kind of services could be post. A user, offering a service, 
+          can post their contact info. Another user, looking for a service, can look in the catalogue all the services available and contact the best qualified person
+          to do the job. Inside the website, users are able to create a profile, and new categories. People can also leave comments about the service they hired for future 
+          users. 
+        </p>
       </div>
     </div>
       <a href="#" type="button" class="btn btn-primary" target="_blank" id="link"><i class="fas fa-arrow-right"></i></a>
   </div>
 
-    <footer>
+    <footer id="footer">
         <div class="card text-center">
             <div class="card-footer text-muted">
                 <p>Copyright ©</p>

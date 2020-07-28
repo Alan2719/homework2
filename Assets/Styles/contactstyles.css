@@ -149,7 +149,7 @@ header .header .logo-box {
     width: 100%;
     padding: 10px;
     background-color: rgb(252, 110, 85);
-    height: 250px;
+    height: auto;
     border-radius: 0.3em;
 }
 
@@ -210,7 +210,7 @@ header .header .logo-box {
 
 @media (max-width: 768px) {
     .aside {
-        height: 200px;
+        height: auto;
         margin-bottom: 15px;
     }
 
@@ -221,7 +221,7 @@ header .header .logo-box {
 
 @media (max-width: 576px) {
     .aside {
-        height: 200px;
+        height: auto;
         margin-bottom: 15px;
     }
 
@@ -268,4 +268,20 @@ footer {
     color: rgb(26, 156, 26);
     display: none;
     font-size: 20px;
+}
+
+.fa-linkedin {
+    color: black;
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-facebook-square {
+    color: black;
+}
+
+#id {
+    color: black!important;
 }
